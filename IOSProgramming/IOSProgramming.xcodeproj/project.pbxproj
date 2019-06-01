@@ -7,15 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7754326522A2BC0C00745A56 /* DetailHospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754326122A2BC0C00745A56 /* DetailHospitalTableViewController.swift */; };
+		7754326622A2BC0C00745A56 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754326222A2BC0C00745A56 /* MapViewController.swift */; };
+		7754326722A2BC0C00745A56 /* HospitalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754326322A2BC0C00745A56 /* HospitalTableViewController.swift */; };
+		7754326822A2BC0C00745A56 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754326422A2BC0C00745A56 /* Hospital.swift */; };
+		7754326A22A2BC1E00745A56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754326922A2BC1E00745A56 /* ViewController.swift */; };
 		777263732285571800D4812B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777263722285571800D4812B /* AppDelegate.swift */; };
 		777263782285571800D4812B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 777263762285571800D4812B /* Main.storyboard */; };
 		7772637A2285571900D4812B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 777263792285571900D4812B /* Assets.xcassets */; };
 		7772637D2285571900D4812B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7772637B2285571900D4812B /* LaunchScreen.storyboard */; };
 		77C16BB5229D9B9F00E058F2 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C16BB4229D9B9F00E058F2 /* AudioController.swift */; };
-		77C16BBF229DAD5600E058F2 /* TraditionalHouseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C16BBE229DAD5600E058F2 /* TraditionalHouseTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7754326122A2BC0C00745A56 /* DetailHospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailHospitalTableViewController.swift; sourceTree = "<group>"; };
+		7754326222A2BC0C00745A56 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7754326322A2BC0C00745A56 /* HospitalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HospitalTableViewController.swift; sourceTree = "<group>"; };
+		7754326422A2BC0C00745A56 /* Hospital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
+		7754326922A2BC1E00745A56 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7772636F2285571800D4812B /* IOSProgramming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSProgramming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		777263722285571800D4812B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		777263772285571800D4812B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -23,7 +32,6 @@
 		7772637C2285571900D4812B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7772637E2285571900D4812B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77C16BB4229D9B9F00E058F2 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
-		77C16BBE229DAD5600E058F2 /* TraditionalHouseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraditionalHouseTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +67,11 @@
 			children = (
 				77C16BB6229DA74000E058F2 /* Classes */,
 				777263722285571800D4812B /* AppDelegate.swift */,
+				7754326122A2BC0C00745A56 /* DetailHospitalTableViewController.swift */,
+				7754326922A2BC1E00745A56 /* ViewController.swift */,
+				7754326422A2BC0C00745A56 /* Hospital.swift */,
+				7754326322A2BC0C00745A56 /* HospitalTableViewController.swift */,
+				7754326222A2BC0C00745A56 /* MapViewController.swift */,
 				777263762285571800D4812B /* Main.storyboard */,
 				777263792285571900D4812B /* Assets.xcassets */,
 				7772637B2285571900D4812B /* LaunchScreen.storyboard */,
@@ -118,7 +131,6 @@
 		77C16BB7229DA74A00E058F2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				77C16BBE229DAD5600E058F2 /* TraditionalHouseTableViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,8 +207,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				77C16BB5229D9B9F00E058F2 /* AudioController.swift in Sources */,
-				77C16BBF229DAD5600E058F2 /* TraditionalHouseTableViewController.swift in Sources */,
+				7754326522A2BC0C00745A56 /* DetailHospitalTableViewController.swift in Sources */,
+				7754326722A2BC0C00745A56 /* HospitalTableViewController.swift in Sources */,
 				777263732285571800D4812B /* AppDelegate.swift in Sources */,
+				7754326A22A2BC1E00745A56 /* ViewController.swift in Sources */,
+				7754326622A2BC0C00745A56 /* MapViewController.swift in Sources */,
+				7754326822A2BC0C00745A56 /* Hospital.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

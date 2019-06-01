@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oOm-xS-bQd">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,95 +10,210 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--선택한 지역의 가옥 지도 표시-->
-        <scene sceneID="RG3-Mb-kQo">
+        <!--OpenAPI 서울시 병원지도표시-->
+        <scene sceneID="WV8-Vt-iQ5">
             <objects>
-                <viewController id="SuZ-xm-U5D" customClass="TraditionalHouseTableViewController" customModule="IOSProgramming" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="6P5-WW-CFT">
+                <viewController id="oOm-xS-bQd" customClass="ViewController" customModule="HospitalMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C8c-LI-k4W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="uAw-EZ-22D"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQ4-FE-uoy">
+                                <rect key="frame" x="0.0" y="340" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="C8c-LI-k4W" id="8YK-os-qCp"/>
+                                    <outlet property="delegate" destination="C8c-LI-k4W" id="iWK-FC-kys"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="VNk-v5-biq"/>
                     </view>
-                    <navigationItem key="navigationItem" title="선택한 지역의 가옥 지도 표시" id="fdx-tM-egV">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="yzb-GY-CQj">
+                    <navigationItem key="navigationItem" title="OpenAPI 서울시 병원지도표시" id="Y8R-Ah-ihq">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="RYg-4q-kIC">
                             <connections>
-                                <segue destination="Wty-Uh-fhY" kind="show" id="8aA-pp-ed2"/>
+                                <segue destination="93v-zD-3SP" kind="show" identifier="segueToTableView" id="GZW-Qs-OtB"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="pickerView" destination="SQ4-FE-uoy" id="brQ-z1-PVF"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WK4-f0-aHt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ErK-WK-jUC" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="28.985507246376812" y="-759.375"/>
+            <point key="canvasLocation" x="923" y="763"/>
         </scene>
-        <!--가옥의 위치-->
-        <scene sceneID="pkL-TR-sGj">
+        <!--병원리스트 TableView-->
+        <scene sceneID="MdV-7U-hSG">
             <objects>
-                <tableViewController id="EQu-2a-azG" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zsw-VL-fSD">
+                <tableViewController id="xR0-YA-e8u" customClass="HospitalTableViewController" customModule="HospitalMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="cLZ-Sm-gWq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="cLH-vh-Wvk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="OED-nV-sDQ" detailTextLabel="Z7q-2C-UyW" style="IBUITableViewCellStyleSubtitle" id="fA1-Su-gt5">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cLH-vh-Wvk" id="6Ye-av-Dz3">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fA1-Su-gt5" id="WS9-if-rHK">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OED-nV-sDQ">
+                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z7q-2C-UyW">
+                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="kjw-DM-YSn" kind="show" identifier="segueToHospitalDetail" id="Oj9-wy-Qhm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xR0-YA-e8u" id="717-Tn-Dao"/>
+                            <outlet property="delegate" destination="xR0-YA-e8u" id="vKg-Gw-Hf6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="병원리스트 TableView" id="4Mk-P2-R5N">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="dSL-g7-ouz">
+                            <connections>
+                                <segue destination="LOd-rM-yny" kind="unwind" unwindAction="doneToPickerViewControllerWithSegue:" id="Dti-TU-FZ4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="지도표시" id="xiE-mI-g8j">
+                            <connections>
+                                <segue destination="ZZS-C9-ntg" kind="show" identifier="segueToMapView" id="zJk-QU-ZL3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tbData" destination="cLZ-Sm-gWq" id="MNc-nk-CJG"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b0g-uL-cm9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="LOd-rM-yny" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2697.1014492753625" y="762.72321428571422"/>
+        </scene>
+        <!--Detail Hospital Table View Controller-->
+        <scene sceneID="cHo-FY-Sxl">
+            <objects>
+                <tableViewController id="kjw-DM-YSn" customClass="DetailHospitalTableViewController" customModule="HospitalMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kZd-qs-IKb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HospitalCell" textLabel="FbX-kj-BC4" detailTextLabel="VBa-Wp-QqH" style="IBUITableViewCellStyleSubtitle" id="8Ia-p7-7oq">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8Ia-p7-7oq" id="OCw-Or-18r">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FbX-kj-BC4">
+                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VBa-Wp-QqH">
+                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="EQu-2a-azG" id="71c-BP-VGD"/>
-                            <outlet property="delegate" destination="EQu-2a-azG" id="Nvx-Lo-WRN"/>
+                            <outlet property="dataSource" destination="kjw-DM-YSn" id="laG-48-6lE"/>
+                            <outlet property="delegate" destination="kjw-DM-YSn" id="6eu-8q-jrl"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="가옥의 위치" id="eIg-Ad-yv4">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="d6e-js-Wha"/>
-                        <barButtonItem key="rightBarButtonItem" title="지도표시" id="SgO-Cj-fOT"/>
-                    </navigationItem>
+                    <connections>
+                        <outlet property="detailTableView" destination="kZd-qs-IKb" id="NKV-8r-O2I"/>
+                    </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tnm-BZ-9tk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pym-ei-Tak" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1786.9565217391305" y="-766.07142857142856"/>
+            <point key="canvasLocation" x="3555" y="761"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="bXw-SZ-H6j">
+            <objects>
+                <viewController id="ZZS-C9-ntg" customClass="MapViewController" customModule="HospitalMap" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yAB-Qn-J5t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="k8F-jM-81j">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ejB-CQ-n9u"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="k8F-jM-81j" id="Lln-Xc-3Fn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Wi-pY-hHn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2713.04347826087" y="1462.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="NmX-rh-2bw">
+        <scene sceneID="FeU-JA-fVT">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MMc-WR-IMS" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="I00-F0-Qzb" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mo8-nw-zAd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wCn-Qj-z96">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="SuZ-xm-U5D" kind="relationship" relationship="rootViewController" id="UoV-xu-Yd8"/>
+                        <segue destination="oOm-xS-bQd" kind="relationship" relationship="rootViewController" id="Kgj-bt-uhX"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8F3-xv-ysY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PPH-6O-DvM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-881.15942028985512" y="-759.375"/>
+            <point key="canvasLocation" x="128.98550724637681" y="762.72321428571422"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="7AP-NH-Y4c">
+        <scene sceneID="QqX-SF-VvO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wty-Uh-fhY" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="93v-zD-3SP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rb7-7b-oPQ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JiB-Mx-nq2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="EQu-2a-azG" kind="relationship" relationship="rootViewController" id="WWU-9q-Lp8"/>
+                        <segue destination="xR0-YA-e8u" kind="relationship" relationship="rootViewController" id="qjN-ZW-G3q"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Yc-cH-SDS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pk1-2w-g50" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="876.81159420289862" y="-766.07142857142856"/>
+            <point key="canvasLocation" x="1786.9565217391305" y="762.72321428571422"/>
         </scene>
     </scenes>
 </document>
