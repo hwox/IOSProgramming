@@ -18,6 +18,7 @@
 		7754333B22A4665700745A56 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333A22A4665700745A56 /* House.swift */; };
 		7754333D22A47CF600745A56 /* LocationChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333C22A47CF600745A56 /* LocationChoiceViewController.swift */; };
 		7754333F22A4993400745A56 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333E22A4993400745A56 /* MapViewController.swift */; };
+		77DD7CCB22A4C15F00502398 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7CCA22A4C15F00502398 /* Candy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		7754333A22A4665700745A56 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		7754333C22A47CF600745A56 /* LocationChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoiceViewController.swift; sourceTree = "<group>"; };
 		7754333E22A4993400745A56 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		77DD7CCA22A4C15F00502398 /* Candy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				7754333A22A4665700745A56 /* House.swift */,
 				7754332C22A3FB2200745A56 /* LikeAddViewController.swift */,
 				7754333C22A47CF600745A56 /* LocationChoiceViewController.swift */,
+				77DD7CCA22A4C15F00502398 /* Candy.swift */,
 			);
 			path = TranditionalHouse;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 				7754333B22A4665700745A56 /* House.swift in Sources */,
 				7754333322A4043400745A56 /* ViewController.swift in Sources */,
 				7754333F22A4993400745A56 /* MapViewController.swift in Sources */,
+				77DD7CCB22A4C15F00502398 /* Candy.swift in Sources */,
 				7754333522A4050F00745A56 /* DetailTableViewController.swift in Sources */,
 				7754331922A3F15B00745A56 /* AppDelegate.swift in Sources */,
 				7754332D22A3FB2200745A56 /* LikeAddViewController.swift in Sources */,

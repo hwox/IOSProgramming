@@ -14,7 +14,7 @@ class HouseTableViewController: UITableViewController,XMLParserDelegate {
     // ViewController로 부터 segue를 통해 전달받은 OpenAPI url주소
     
     
-    var url : String = "http://api.visitkorea.or.kr/openapi/service/rest/HanokStayInformationService/hanokStayInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=90&langType=KOR&MobileOS=ETC&MobileApp=AppTest"
+    var url : String = "http://api.visitkorea.or.kr/openapi/service/rest/HanokStayInformationService/hanokStayInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=130&pageNo=1&langType=KOR&MobileOS=ETC&MobileApp=AppTest"
 
     //var url : String?
     
@@ -50,7 +50,7 @@ class HouseTableViewController: UITableViewController,XMLParserDelegate {
     
     func beginParsing(){
         posts = []
-        parser = XMLParser(contentsOf:(URL(string:"http://api.visitkorea.or.kr/openapi/service/rest/HanokStayInformationService/hanokStayInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=90&langType=KOR&MobileOS=ETC&MobileApp=AppTest"))!)!
+        parser = XMLParser(contentsOf:(URL(string:"http://api.visitkorea.or.kr/openapi/service/rest/HanokStayInformationService/hanokStayInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=130&pageNo=1&langType=KOR&MobileOS=ETC&MobileApp=AppTest"))!)!
        // parser = XMLParser(contentsOf:(URL(string:url!))!)!
         parser.delegate = self
         parser.parse()
@@ -150,7 +150,7 @@ class HouseTableViewController: UITableViewController,XMLParserDelegate {
                 Housename_utf8 = Housename.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
                 if let detailTableViewController = segue.destination as? DetailTableViewController {
 
-                    detailTableViewController.url = url! + "&titleKorean=" + Housename_utf8
+                    detailTableViewController.url = url + "&titleKorean=" + Housename_utf8
                     //DetailTableViewController.url = url! + "&titleKorean=" + Housename_utf8
                    
                 }
