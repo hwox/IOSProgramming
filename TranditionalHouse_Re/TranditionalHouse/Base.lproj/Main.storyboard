@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Like Add View Controller-->
+        <!--View Controller-->
         <scene sceneID="hCb-pc-Yhd">
             <objects>
-                <viewController id="cpf-F4-1jk" customClass="LikeAddViewController" customModule="TranditionalHouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cpf-F4-1jk" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sQO-FM-O18">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,13 +31,27 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="amW-VY-Sla"/>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="gl0-o1-zUE">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="IPS-Ff-TBm">
+                            <connections>
+                                <segue destination="AQ0-KF-aIF" kind="show" id="ymF-ZW-PBs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="w8j-u3-tEe">
+                            <connections>
+                                <segue destination="SHZ-cC-ZfZ" kind="show" id="hrZ-io-ufo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <segue destination="SHZ-cC-ZfZ" kind="show" identifier="LikeAdd" id="9kI-9c-Rm2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G8m-ii-i9l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4871.0144927536239" y="432.58928571428572"/>
+            <point key="canvasLocation" x="5781.1594202898559" y="432.58928571428572"/>
         </scene>
         <!--즐겨찾기 Add-->
         <scene sceneID="DxY-Zw-oFF">
@@ -58,10 +72,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PWo-gt-Sh6"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRb-Af-tqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5733.3333333333339" y="432.58928571428572"/>
+            <point key="canvasLocation" x="6643.4782608695659" y="432.58928571428572"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="aZN-YY-r3I">
@@ -86,7 +102,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E0U-6I-e5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6542.0289855072469" y="672.99107142857144"/>
+            <point key="canvasLocation" x="7452.1739130434789" y="672.99107142857144"/>
         </scene>
         <!--숙박_Detail-->
         <scene sceneID="zEJ-IY-JaJ">
@@ -107,10 +123,14 @@
                                 </barButtonItem>
                                 <barButtonItem title="주변 관광지" id="x2x-48-P3V">
                                     <connections>
-                                        <segue destination="wgy-xc-z3a" kind="show" id="nxa-Cg-cJP"/>
+                                        <segue destination="Oeh-ia-hkq" kind="show" id="aEH-Zx-ze7"/>
                                     </connections>
                                 </barButtonItem>
-                                <barButtonItem title="가옥 상세설명" id="QnL-r6-eQF"/>
+                                <barButtonItem title="가옥 상세설명" id="QnL-r6-eQF">
+                                    <connections>
+                                        <segue destination="W5u-Zc-Z0z" kind="show" id="flK-Sc-1JI"/>
+                                    </connections>
+                                </barButtonItem>
                             </items>
                         </toolbar>
                         <prototypes>
@@ -137,9 +157,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="W5u-Zc-Z0z" kind="show" identifier="segueToTour" id="dmL-gB-zwh"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -181,12 +198,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Trv-5d-erH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5632" y="1533"/>
+            <point key="canvasLocation" x="6542.0289855072469" y="1532.8125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mca-3t-vsD">
+            <objects>
+                <viewController id="Kdr-2l-mVU" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uPz-vw-hEK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DmZ-ok-4Wb">
+                                <rect key="frame" x="87" y="325" width="240" height="269"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mEt-lI-mNe"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="YCC-Yj-SRW">
+                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="Fbv-RB-6RH">
+                            <connections>
+                                <segue destination="bjp-Nf-TzZ" kind="show" id="NOi-Lp-hYp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="추천" id="obF-71-n10">
+                            <connections>
+                                <segue destination="XzR-Us-Mnh" kind="show" id="rVu-Hh-uVu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUP-Ue-s00" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5779.7101449275369" y="2008.9285714285713"/>
         </scene>
         <!--주변관광지목록-->
         <scene sceneID="m49-vi-T5o">
             <objects>
-                <viewController title="주변관광지목록" id="wgy-xc-z3a" customClass="HouseViewController" customModule="TranditionalHouse" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="주변관광지목록" id="wgy-xc-z3a" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pLe-Jn-zDd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,7 +273,7 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Eca-QL-J7I" kind="show" id="4AZ-3t-uRP"/>
+                                            <segue destination="Eca-QL-J7I" kind="show" id="mfs-dq-50n"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -261,12 +314,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lyx-eD-PR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4945" y="2009"/>
+            <point key="canvasLocation" x="3090" y="2792"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="POR-nE-rar">
+            <objects>
+                <viewController id="MCk-c4-Ci1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YxZ-EG-Nb2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="j1E-Ec-zc0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vbg-vn-MK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7513.04347826087" y="2317.6339285714284"/>
         </scene>
         <!--관광지세부정보-->
         <scene sceneID="MaP-BM-hzX">
             <objects>
-                <tableViewController title="관광지세부정보" id="Eca-QL-J7I" customClass="DetailTableViewController" customModule="TranditionalHouse" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="관광지세부정보" id="Eca-QL-J7I" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="6fM-h6-Tpv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -362,7 +430,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="즐겨찾기" id="0yP-vq-pce">
                             <connections>
-                                <segue destination="cpf-F4-1jk" kind="show" id="O5i-bq-VcI"/>
+                                <segue destination="TGP-si-uy8" kind="show" id="O5i-bq-VcI"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -391,7 +459,7 @@
                                 <rect key="frame" x="44" y="117" width="327" height="657"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I0O-eC-adv" id="tq2-DQ-9Ff">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="656.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="327" height="656.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hi" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMk-4c-KOq">
@@ -453,5 +521,131 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="717.85714285714278"/>
         </scene>
+        <!--관광지상세설명-->
+        <scene sceneID="AX4-WO-4gE">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="37W-0b-b2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="관광지상세설명" id="tGc-lx-6gd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Asm-z1-wK7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="453" translatesAutoresizingMaskIntoConstraints="NO" id="qrp-s0-JDY">
+                                <rect key="frame" x="0.0" y="180" width="414" height="453"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qrp-s0-JDY" id="ELV-vt-Wv6">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="452.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Ip6-GT-LCT"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="5779.7101449275369" y="2761.6071428571427"/>
+        </scene>
+        <!--추천관광지-->
+        <scene sceneID="VWC-Q1-Vph">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l2g-jv-aqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController title="추천관광지" id="kIs-Rj-Qy8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LRZ-7p-OOt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="453" translatesAutoresizingMaskIntoConstraints="NO" id="VBc-bD-gAp">
+                                <rect key="frame" x="0.0" y="180" width="414" height="453"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VBc-bD-gAp" id="pjz-B4-784">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="452.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="GmL-zA-FVL"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="L3x-Rj-xeN">
+                        <barButtonItem key="leftBarButtonItem" style="done" systemItem="done" id="weZ-JE-8G7">
+                            <connections>
+                                <segue destination="Oeh-ia-hkq" kind="show" id="tgC-i1-zk9"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="K1V-wO-X4g">
+                            <connections>
+                                <segue destination="tGc-lx-6gd" kind="show" id="nSd-77-GXC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="4976.811594202899" y="2761.6071428571427"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="H3m-Ls-aZ0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TGP-si-uy8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="D1E-PS-QQo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cpf-F4-1jk" kind="relationship" relationship="rootViewController" id="d3w-f8-y7r"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uWX-qf-eBX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4871.0144927536239" y="432.58928571428572"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bru-Rs-PTT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Oeh-ia-hkq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5P5-2B-H2j">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Kdr-2l-mVU" kind="relationship" relationship="rootViewController" id="CTU-jg-BBN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aVA-2e-BIb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4869.5652173913049" y="2008.9285714285713"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ar2-Ic-pXZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XzR-Us-Mnh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PcI-3v-RLi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kIs-Rj-Qy8" kind="relationship" relationship="rootViewController" id="z4F-Zk-EY0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Nb-rN-O8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4066.666666666667" y="2761.6071428571427"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="tgC-i1-zk9"/>
+        <segue reference="ymF-ZW-PBs"/>
+        <segue reference="NOi-Lp-hYp"/>
+        <segue reference="9kI-9c-Rm2"/>
+    </inferredMetricsTieBreakers>
 </document>

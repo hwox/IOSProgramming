@@ -308,6 +308,8 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
                 mapViewController.posts = location
             }
         }
+        
+        
     }
     /*
     // Override to support conditional editing of the table view.
