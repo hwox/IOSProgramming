@@ -17,14 +17,16 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
     
     var parser = XMLParser()
     
-    let postname : [String] = ["가옥 이름", "건축 시기", "체크 인", "체크 아웃", "쉬는 날", "취사 여부", "드라이기", "선풍기",
-    "민속 마을", "인터넷 가능 여부", "객실수(숙박가능인원)", "냉장고", "최소 객실요금", "숙박가능 여부", "화장실", "세면도구", "tv","지번주소"]
+    let postname : [String] = ["가옥 이름", "건축 시기", "체크 인", "체크 아웃", "쉬는 날", "취사 여부", "드라이기 ( 0 없음 / 1 있음 )", "선풍기 ( 0 없음 / 1 있음 )",
+    "민속 마을", "인터넷 가능 여부(0 불가능 / 1 가능)", "객실수(숙박가능인원)", "냉장고 ( 0 없음 / 1 있음 )", "최소 객실요금", "숙박가능 여부", "화장실 ( 0 없음 / 1 있음) ", "세면도구 ( 0 없음 / 1 있음) ", "tv ( 0 없음 / 1 있음) ","지번주소"]
     var posts : [String] = ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""]
     
     var location = NSMutableArray()
     
     var elements = NSMutableDictionary()
     var element = NSString()
+    
+    var sido = NSMutableDictionary()
     
     var titleKorean = NSMutableString()
     var House_gener = NSMutableString()
@@ -48,15 +50,22 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
     var XPos = NSMutableString()
     var YPos = NSMutableString()
     
+    var sidoAreaCode = NSMutableString()
+    var sigunguAreaCode = NSMutableString()
+    
     
     var housename = ""
     var housename_utf8 = ""
     
+  
     
     override func viewDidLoad() {
+        
+        
         super.viewDidLoad()
         beginParsing()
         
+        self.navigationItem.title = titleKorean as String
     }
 
     
@@ -132,6 +141,12 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
             XPos = ""
             YPos = NSMutableString()
             YPos = ""
+            
+            sidoAreaCode = NSMutableString()
+            sidoAreaCode = ""
+            
+            sigunguAreaCode = NSMutableString()
+            sigunguAreaCode = ""
 
         }
     }
@@ -199,6 +214,12 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
             YPos.append(string)
         }
         
+        else if element.isEqual(to: "sidoAreaCode"){
+            sidoAreaCode.append(string)
+        }
+        else if element.isEqual(to: "sigunguAreaCode"){
+            sigunguAreaCode.append(string)
+        }
         
     }
     
@@ -275,7 +296,16 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
 
                 
             }
+            
+            if !sidoAreaCode.isEqual(nil){
+                sido.setObject(sidoAreaCode, forKey: "sidoAreaCode" as NSCopying)
+            }
+            if !sigunguAreaCode.isEqual(nil){
+                sido.setObject(sigunguAreaCode, forKey: "sigunguAreaCode" as NSCopying)
+            }
+            
             location.add(elements)
+            print(sido)
         }
         
     }
@@ -312,11 +342,24 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
                 mapViewController.posts = location
             }
         }
+        
+        if segue.identifier == "segueToLike" {
+            if let likeaddViewController = segue.destination as? LikeAddTableViewController {
+                likeaddViewController.titleKorean = titleKorean as String
+            }
+        }
+        
+        
+        if segue.identifier == "segueToTourList" {
+            if let tourTableViewController = segue.destination as? TourTableViewController {
+                tourTableViewController.sidoAreaCode = self.sidoAreaCode
+                tourTableViewController.sigunguAreaCode = self.sigunguAreaCode
+                
+            }
+        }
  
         
         if segue.identifier == "segueToExplainHouse"{
-
-       
 
                 housename = posts[0] as! NSString as String
                 // url에서 한글을 쓸 수 있도록 코딩

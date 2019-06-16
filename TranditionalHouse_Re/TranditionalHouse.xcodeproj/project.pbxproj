@@ -11,7 +11,6 @@
 		7754331E22A3F15B00745A56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7754331C22A3F15B00745A56 /* Main.storyboard */; };
 		7754332022A3F15C00745A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7754331F22A3F15C00745A56 /* Assets.xcassets */; };
 		7754332322A3F15C00745A56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7754332122A3F15C00745A56 /* LaunchScreen.storyboard */; };
-		7754332D22A3FB2200745A56 /* LikeAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754332C22A3FB2200745A56 /* LikeAddViewController.swift */; };
 		7754333322A4043400745A56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333222A4043300745A56 /* ViewController.swift */; };
 		7754333522A4050F00745A56 /* DetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333422A4050F00745A56 /* DetailTableViewController.swift */; };
 		7754333722A455F900745A56 /* HouseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333622A455F900745A56 /* HouseTableViewController.swift */; };
@@ -20,8 +19,6 @@
 		7754333F22A4993400745A56 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333E22A4993400745A56 /* MapViewController.swift */; };
 		77AAD53F22B3A1D700394C5C /* TourTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD53E22B3A1D700394C5C /* TourTableViewController.swift */; };
 		77AAD54122B6216F00394C5C /* StartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD54022B6216F00394C5C /* StartTableViewController.swift */; };
-		77AAD54422B621CE00394C5C /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD54322B621CE00394C5C /* icon */; };
-		77AAD54822B62CCE00394C5C /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD54722B62CCE00394C5C /* Audio */; };
 		77AAD54A22B62CDE00394C5C /* ExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD54922B62CDE00394C5C /* ExplodeView.swift */; };
 		77AAD54C22B62CE800394C5C /* StardustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD54B22B62CE800394C5C /* StardustView.swift */; };
 		77AAD55022B6381400394C5C /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD54F22B6381400394C5C /* button.png */; };
@@ -29,6 +26,20 @@
 		77AAD55522B63B0F00394C5C /* SSShinb7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD55322B63AF500394C5C /* SSShinb7.ttf */; };
 		77AAD55722B63FD400394C5C /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD55622B63FD400394C5C /* frame.png */; };
 		77B0F02C22B647F700CB6B4F /* ExplainHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F02B22B647F700CB6B4F /* ExplainHouseViewController.swift */; };
+		77B0F03022B6913D00CB6B4F /* LikeAddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F02F22B6913D00CB6B4F /* LikeAddTableViewController.swift */; };
+		77B0F03222B6916500CB6B4F /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F03122B6916500CB6B4F /* Like.swift */; };
+		77B0F03522B696C600CB6B4F /* star2.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B0F03322B696C500CB6B4F /* star2.png */; };
+		77B0F03622B696C600CB6B4F /* star1.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B0F03422B696C500CB6B4F /* star1.png */; };
+		77B0F03922B696C900CB6B4F /* star3.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B0F03722B696C900CB6B4F /* star3.png */; };
+		77B0F03A22B696C900CB6B4F /* star5.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B0F03822B696C900CB6B4F /* star5.png */; };
+		77B0F03C22B696CE00CB6B4F /* star4.png in Resources */ = {isa = PBXBuildFile; fileRef = 77B0F03B22B696CE00CB6B4F /* star4.png */; };
+		77B0F03E22B69B7A00CB6B4F /* AddHouseListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F03D22B69B7A00CB6B4F /* AddHouseListTableViewController.swift */; };
+		77B0F04022B6AA9500CB6B4F /* ProjectTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F03F22B6AA9500CB6B4F /* ProjectTheme.swift */; };
+		77B0F04222B6BC8900CB6B4F /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F04122B6BC8900CB6B4F /* AudioController.swift */; };
+		77B0F04422B6BD1200CB6B4F /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F04322B6BD1200CB6B4F /* Config.swift */; };
+		77B0F04622B6BDB900CB6B4F /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 77B0F04522B6BDB900CB6B4F /* Audio */; };
+		77B0F04822B6D06700CB6B4F /* TourDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F04722B6D06700CB6B4F /* TourDetailTableViewController.swift */; };
+		77B0F04A22B6D76E00CB6B4F /* TourExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F04922B6D76E00CB6B4F /* TourExplainViewController.swift */; };
 		77DD7CCB22A4C15F00502398 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7CCA22A4C15F00502398 /* Candy.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +50,6 @@
 		7754331F22A3F15C00745A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7754332222A3F15C00745A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7754332422A3F15C00745A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7754332C22A3FB2200745A56 /* LikeAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAddViewController.swift; sourceTree = "<group>"; };
 		7754333222A4043300745A56 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7754333422A4050F00745A56 /* DetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewController.swift; sourceTree = "<group>"; };
 		7754333622A455F900745A56 /* HouseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HouseTableViewController.swift; sourceTree = "<group>"; };
@@ -48,8 +58,6 @@
 		7754333E22A4993400745A56 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		77AAD53E22B3A1D700394C5C /* TourTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourTableViewController.swift; sourceTree = "<group>"; };
 		77AAD54022B6216F00394C5C /* StartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTableViewController.swift; sourceTree = "<group>"; };
-		77AAD54322B621CE00394C5C /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icon; path = ../../icon; sourceTree = "<group>"; };
-		77AAD54722B62CCE00394C5C /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = "../../../../스마트폰게임프로그래밍/Yahtzee/Yahtzee/Assets/Audio"; sourceTree = "<group>"; };
 		77AAD54922B62CDE00394C5C /* ExplodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplodeView.swift; sourceTree = "<group>"; };
 		77AAD54B22B62CE800394C5C /* StardustView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StardustView.swift; sourceTree = "<group>"; };
 		77AAD54F22B6381400394C5C /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
@@ -57,6 +65,20 @@
 		77AAD55322B63AF500394C5C /* SSShinb7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SSShinb7.ttf; sourceTree = "<group>"; };
 		77AAD55622B63FD400394C5C /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame.png; sourceTree = "<group>"; };
 		77B0F02B22B647F700CB6B4F /* ExplainHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainHouseViewController.swift; sourceTree = "<group>"; };
+		77B0F02F22B6913D00CB6B4F /* LikeAddTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeAddTableViewController.swift; sourceTree = "<group>"; };
+		77B0F03122B6916500CB6B4F /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
+		77B0F03322B696C500CB6B4F /* star2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star2.png; sourceTree = "<group>"; };
+		77B0F03422B696C500CB6B4F /* star1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star1.png; sourceTree = "<group>"; };
+		77B0F03722B696C900CB6B4F /* star3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star3.png; sourceTree = "<group>"; };
+		77B0F03822B696C900CB6B4F /* star5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star5.png; sourceTree = "<group>"; };
+		77B0F03B22B696CE00CB6B4F /* star4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star4.png; sourceTree = "<group>"; };
+		77B0F03D22B69B7A00CB6B4F /* AddHouseListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddHouseListTableViewController.swift; sourceTree = "<group>"; };
+		77B0F03F22B6AA9500CB6B4F /* ProjectTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectTheme.swift; sourceTree = "<group>"; };
+		77B0F04122B6BC8900CB6B4F /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		77B0F04322B6BD1200CB6B4F /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		77B0F04522B6BDB900CB6B4F /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Audio; sourceTree = "<group>"; };
+		77B0F04722B6D06700CB6B4F /* TourDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourDetailTableViewController.swift; sourceTree = "<group>"; };
+		77B0F04922B6D76E00CB6B4F /* TourExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourExplainViewController.swift; sourceTree = "<group>"; };
 		77DD7CCA22A4C15F00502398 /* Candy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,9 +96,6 @@
 		7754330C22A3F15B00745A56 = {
 			isa = PBXGroup;
 			children = (
-				7754331C22A3F15B00745A56 /* Main.storyboard */,
-				77AAD54622B62CC700394C5C /* Assets */,
-				77AAD54222B621B400394C5C /* Resource */,
 				7754331722A3F15B00745A56 /* TranditionalHouse */,
 				7754331622A3F15B00745A56 /* Products */,
 			);
@@ -93,8 +112,16 @@
 		7754331722A3F15B00745A56 /* TranditionalHouse */ = {
 			isa = PBXGroup;
 			children = (
+				77B0F04722B6D06700CB6B4F /* TourDetailTableViewController.swift */,
+				7754331C22A3F15B00745A56 /* Main.storyboard */,
+				77B0F04322B6BD1200CB6B4F /* Config.swift */,
+				77B0F03F22B6AA9500CB6B4F /* ProjectTheme.swift */,
+				77B0F04122B6BC8900CB6B4F /* AudioController.swift */,
+				77AAD54222B621B400394C5C /* Resource */,
+				77AAD54622B62CC700394C5C /* Assets */,
 				7754331822A3F15B00745A56 /* AppDelegate.swift */,
 				7754331F22A3F15C00745A56 /* Assets.xcassets */,
+				77B0F03D22B69B7A00CB6B4F /* AddHouseListTableViewController.swift */,
 				7754332122A3F15C00745A56 /* LaunchScreen.storyboard */,
 				7754333222A4043300745A56 /* ViewController.swift */,
 				7754332422A3F15C00745A56 /* Info.plist */,
@@ -102,12 +129,14 @@
 				7754333422A4050F00745A56 /* DetailTableViewController.swift */,
 				7754333E22A4993400745A56 /* MapViewController.swift */,
 				7754333A22A4665700745A56 /* House.swift */,
-				7754332C22A3FB2200745A56 /* LikeAddViewController.swift */,
 				7754333C22A47CF600745A56 /* LocationChoiceViewController.swift */,
 				77DD7CCA22A4C15F00502398 /* Candy.swift */,
 				77AAD53E22B3A1D700394C5C /* TourTableViewController.swift */,
 				77AAD54022B6216F00394C5C /* StartTableViewController.swift */,
 				77B0F02B22B647F700CB6B4F /* ExplainHouseViewController.swift */,
+				77B0F03122B6916500CB6B4F /* Like.swift */,
+				77B0F02F22B6913D00CB6B4F /* LikeAddTableViewController.swift */,
+				77B0F04922B6D76E00CB6B4F /* TourExplainViewController.swift */,
 			);
 			path = TranditionalHouse;
 			sourceTree = "<group>";
@@ -116,9 +145,13 @@
 			isa = PBXGroup;
 			children = (
 				77AAD55622B63FD400394C5C /* frame.png */,
+				77B0F03322B696C500CB6B4F /* star2.png */,
+				77B0F03422B696C500CB6B4F /* star1.png */,
+				77B0F03B22B696CE00CB6B4F /* star4.png */,
+				77B0F03722B696C900CB6B4F /* star3.png */,
+				77B0F03822B696C900CB6B4F /* star5.png */,
 				77AAD55122B63A8200394C5C /* Font */,
 				77AAD54F22B6381400394C5C /* button.png */,
-				77AAD54322B621CE00394C5C /* icon */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -126,9 +159,9 @@
 		77AAD54622B62CC700394C5C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				77B0F04522B6BDB900CB6B4F /* Audio */,
 				77AAD54922B62CDE00394C5C /* ExplodeView.swift */,
 				77AAD54B22B62CE800394C5C /* StardustView.swift */,
-				77AAD54722B62CCE00394C5C /* Audio */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -201,12 +234,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7754332322A3F15C00745A56 /* LaunchScreen.storyboard in Resources */,
+				77B0F03922B696C900CB6B4F /* star3.png in Resources */,
+				77B0F03C22B696CE00CB6B4F /* star4.png in Resources */,
+				77B0F04622B6BDB900CB6B4F /* Audio in Resources */,
 				77AAD55522B63B0F00394C5C /* SSShinb7.ttf in Resources */,
 				77AAD55022B6381400394C5C /* button.png in Resources */,
-				77AAD54822B62CCE00394C5C /* Audio in Resources */,
+				77B0F03622B696C600CB6B4F /* star1.png in Resources */,
+				77B0F03522B696C600CB6B4F /* star2.png in Resources */,
 				77AAD55422B63B0D00394C5C /* SCDream4.otf in Resources */,
 				77AAD55722B63FD400394C5C /* frame.png in Resources */,
-				77AAD54422B621CE00394C5C /* icon in Resources */,
+				77B0F03A22B696C900CB6B4F /* star5.png in Resources */,
 				7754332022A3F15C00745A56 /* Assets.xcassets in Resources */,
 				7754331E22A3F15B00745A56 /* Main.storyboard in Resources */,
 			);
@@ -219,19 +256,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B0F03E22B69B7A00CB6B4F /* AddHouseListTableViewController.swift in Sources */,
 				77B0F02C22B647F700CB6B4F /* ExplainHouseViewController.swift in Sources */,
 				77AAD54A22B62CDE00394C5C /* ExplodeView.swift in Sources */,
+				77B0F04A22B6D76E00CB6B4F /* TourExplainViewController.swift in Sources */,
 				7754333D22A47CF600745A56 /* LocationChoiceViewController.swift in Sources */,
+				77B0F04422B6BD1200CB6B4F /* Config.swift in Sources */,
 				7754333B22A4665700745A56 /* House.swift in Sources */,
 				7754333322A4043400745A56 /* ViewController.swift in Sources */,
 				7754333F22A4993400745A56 /* MapViewController.swift in Sources */,
 				77DD7CCB22A4C15F00502398 /* Candy.swift in Sources */,
 				77AAD53F22B3A1D700394C5C /* TourTableViewController.swift in Sources */,
+				77B0F04822B6D06700CB6B4F /* TourDetailTableViewController.swift in Sources */,
+				77B0F03022B6913D00CB6B4F /* LikeAddTableViewController.swift in Sources */,
+				77B0F04222B6BC8900CB6B4F /* AudioController.swift in Sources */,
+				77B0F03222B6916500CB6B4F /* Like.swift in Sources */,
+				77B0F04022B6AA9500CB6B4F /* ProjectTheme.swift in Sources */,
 				77AAD54122B6216F00394C5C /* StartTableViewController.swift in Sources */,
 				77AAD54C22B62CE800394C5C /* StardustView.swift in Sources */,
 				7754333522A4050F00745A56 /* DetailTableViewController.swift in Sources */,
 				7754331922A3F15B00745A56 /* AppDelegate.swift in Sources */,
-				7754332D22A3FB2200745A56 /* LikeAddViewController.swift in Sources */,
 				7754333722A455F900745A56 /* HouseTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

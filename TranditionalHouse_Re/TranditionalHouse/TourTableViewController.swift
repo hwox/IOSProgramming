@@ -8,87 +8,125 @@
 
 import UIKit
 
-class TourTableViewController: UITableViewController {
+class TourTableViewController: UITableViewController,XMLParserDelegate  {
 
     
-    // 일단 전통가옥과 주변관광지의 이미지 정보조회
-    // 관광명소/ 쇼핑정보 조회 있으니까 이것도 나눠서 같이 추가
-    // 그리고 위치 안뜨는거는 기본정보 API에서 따로 가져와서 추출해야 될 것 같음 
+    @IBOutlet var TbData: UITableView!
+    
+    var parser = XMLParser()
+    
+    var posts = NSMutableArray()
+    
+    var elements = NSMutableDictionary()
+    var element = NSString()
+    
+    var dbTitle = NSMutableString()
+    var title2 = NSMutableString()
+    
+    var sidoAreaCode = NSMutableString()
+    var sigunguAreaCode = NSMutableString()
+    
+    // 대표이미지
+    var thumImg = NSMutableString()
+    
+    var tourname = ""
+    var tourname_utf8 = ""
+    
+    var url : String = "http://api.visitkorea.or.kr/openapi/service/rest/SurroundingTourInformationService/tourAttractionInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=10&pageNo=1&langType=KOR&MobileOS=ETC&MobileApp=AppTest"+"&sidoArea="
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        beginParsing()
+        // Do any additional setup after loading the view.
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+    
+    func beginParsing(){
+        
+        
+        posts = []
+        parser = XMLParser(contentsOf:(URL(string:url+(sidoAreaCode as String) as String))!)!
+        parser.delegate = self
+        parser.parse()
+        TbData.reloadData()
     }
+    
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI namdspaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]){
+        element = elementName as NSString
+        if (elementName as NSString).isEqual(to: "item"){
+            elements = NSMutableDictionary()
+            elements = [:]
+            dbTitle = NSMutableString()
+            dbTitle = ""
+            title2 = NSMutableString()
+            title2 = ""
+            
+            thumImg = NSMutableString()
+            thumImg = ""
+            
+        }
+    }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String){
+        
+        if element.isEqual(to: "dbTitle"){
+            dbTitle.append(string)
+        } else if element.isEqual(to: "title"){
+            title2.append(string)
+        } else if element.isEqual(to: "thumImg"){
+            thumImg.append(string)
+        }
 
+    }
+    
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI namdspaceURI: String?, qualifiedName qName: String?){
+        if(elementName as NSString).isEqual(to: "item"){
+            if !dbTitle.isEqual(nil) {
+                elements.setObject(dbTitle, forKey: "dbTitle" as NSCopying)
+            }
+            if !title2.isEqual(nil) {
+                elements.setObject(title2, forKey: "title" as NSCopying)
+            }
+            if !thumImg.isEqual(nil){
+                elements.setObject(thumImg, forKey: "thumImg" as NSCopying)
+                
+            }
+            posts.add(elements)
+        }
+        
+        
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return posts.count
     }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "dbTitle") as! NSString as String
+        cell.detailTextLabel?.text = (posts.object(at: indexPath.row) as AnyObject).value(forKey: "title") as! NSString as String
+        
+        if let url = URL(string: (posts.object(at: indexPath.row) as AnyObject).value(forKey: "thumImg") as! NSString as String){
+            if let data = try? Data(contentsOf: url){
+                print(data)
+                cell.imageView?.image = UIImage(data: data)
+            }
+        }
+        
+        
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let cell = sender as? UITableViewCell {
+        let indexPath = tableView.indexPath(for: cell)
+        tourname = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "dbTitle") as! NSString as String
+        // url에서 한글을 쓸 수 있도록 코딩
+        tourname_utf8 = tourname.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+        if segue.identifier == "segueToTourDetail" {
+            if let tourDetailTableViewController = segue.destination as? TourDetailTableViewController {
+                tourDetailTableViewController.url = "http://api.visitkorea.or.kr/openapi/service/rest/SurroundingTourInformationService/tourAttractionInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=10&pageNo=1&langType=KOR&MobileOS=ETC&MobileApp=AppTest" + "&dbTitle=" + tourname_utf8
+            }
+        }
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

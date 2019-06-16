@@ -61,10 +61,11 @@ class MapViewController: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let initialLocation = CLLocation(latitude: 37.5384514, longitude: 127.0709764)
-        centerMapOnLocation(location: initialLocation)
+       // let initialLocation = CLLocation(latitude: 37.5384514, longitude: 127.0709764)
         mapView.delegate = self
         loadInitialData()
+        let initialLocation = CLLocation(latitude: houses[0].coordinate.latitude, longitude: houses[0].coordinate.longitude)
+        centerMapOnLocation(location: initialLocation)
         mapView.addAnnotations(houses)
     }
 }
