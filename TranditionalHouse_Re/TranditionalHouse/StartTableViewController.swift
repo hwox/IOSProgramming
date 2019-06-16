@@ -12,9 +12,21 @@ class StartTableViewController: UIViewController {
 
     @IBOutlet weak var MainImage: UIImageView!
     
+    @IBOutlet weak var leftDoor: UIImageView!
+    @IBOutlet weak var rightDoor: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        UIView.animate(withDuration: 1.5, animations: ({
+            self.leftDoor.transform = CGAffineTransform(translationX: -200, y: 0)
+        }))
+        UIView.animate(withDuration: 1.5, animations: ({
+            self.rightDoor.transform = CGAffineTransform(translationX: 200, y: 0)
+        }))
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

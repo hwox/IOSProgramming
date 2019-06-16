@@ -117,6 +117,21 @@ class TourTableViewController: UITableViewController,XMLParserDelegate  {
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
+        
+        if segue.identifier == "segueToRecommend" {
+            let randomNo: UInt32 = arc4random_uniform(UInt32(posts.count));
+            
+           // tourname = posts[Int(randomNo)] as! NSString as String
+            tourname = (posts.object(at: Int(randomNo)) as AnyObject).value(forKey: "dbTitle") as! NSString as String
+            tourname_utf8 = tourname.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+
+            if let recommendViewController = segue.destination as? RecommendViewController {
+                
+                recommendViewController.url = "http://api.visitkorea.or.kr/openapi/service/rest/SurroundingTourInformationService/tourAttractionInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=10&pageNo=1&langType=KOR&MobileOS=ETC&MobileApp=AppTest" + "&dbTitle=" + tourname_utf8
+                
+            }
+        }
+        
         if let cell = sender as? UITableViewCell {
         let indexPath = tableView.indexPath(for: cell)
         tourname = (posts.object(at: (indexPath?.row)!) as AnyObject).value(forKey: "dbTitle") as! NSString as String
@@ -127,6 +142,7 @@ class TourTableViewController: UITableViewController,XMLParserDelegate  {
                 tourDetailTableViewController.url = "http://api.visitkorea.or.kr/openapi/service/rest/SurroundingTourInformationService/tourAttractionInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=10&pageNo=1&langType=KOR&MobileOS=ETC&MobileApp=AppTest" + "&dbTitle=" + tourname_utf8
             }
         }
+       
         }
     }
 }

@@ -21,3 +21,6 @@ struct Like {
         self.rating = rating
     }
 }
+
+var LikeData : [Like] = []
+

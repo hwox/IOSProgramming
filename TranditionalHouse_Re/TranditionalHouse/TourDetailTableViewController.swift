@@ -167,6 +167,7 @@ class TourDetailTableViewController: UITableViewController, XMLParserDelegate {
                 
             }
             }
+       
             
         }
         

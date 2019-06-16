@@ -10,10 +10,11 @@ import UIKit
 
 class ExplainHouseViewController: UIViewController, XMLParserDelegate {
 
-    @IBOutlet weak var imagehouse: UIImageView!
+  //  @IBOutlet weak var imagehouse: UIImageView!
     @IBOutlet weak var coreText: UITextView!
     @IBOutlet weak var introText: UITextView!
     @IBOutlet var explainview: UIView!
+    @IBOutlet weak var imagehouse: UIImageView!
     
     
     var introduction = NSMutableString() // 소개 긴거
@@ -34,6 +35,10 @@ class ExplainHouseViewController: UIViewController, XMLParserDelegate {
     var elements = NSMutableDictionary()
     var element = NSString()
     
+    
+    var housename = ""
+    var housename_utf8 = ""
+    
     func beginParsing(){
         
         posts = []
@@ -48,6 +53,8 @@ class ExplainHouseViewController: UIViewController, XMLParserDelegate {
         super.viewDidLoad()
         beginParsing()
         ResetView()
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -126,6 +133,9 @@ class ExplainHouseViewController: UIViewController, XMLParserDelegate {
     }
     
 
+    
+    
+    
     /*
     // MARK: - Navigation
 

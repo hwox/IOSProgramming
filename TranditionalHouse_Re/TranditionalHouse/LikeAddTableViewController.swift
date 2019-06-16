@@ -20,8 +20,11 @@ class LikeAddTableViewController: UITableViewController {
     @IBAction func saveAddLike(segue: UIStoryboardSegue){
         if let addhouseListViewController = segue.source as? AddHouseListTableViewController {
             if let like = addhouseListViewController.like {
-                likeadd.append(like)
                 
+                
+                likeadd.append(like)
+                LikeData.append(like)
+                //LikeData = [Like(name: like.name!, memo: like.memo!, rating: like.rating)]
                 let indexPath = IndexPath(row: likeadd.count-1, section:0)
                 tableView.insertRows(at: [indexPath], with: .automatic)
             }
@@ -29,11 +32,10 @@ class LikeAddTableViewController: UITableViewController {
     }
     
    // var likeadd:[Like] = []
-    var likeadd:[Like] = []
+    var likeadd:[Like] = LikeData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

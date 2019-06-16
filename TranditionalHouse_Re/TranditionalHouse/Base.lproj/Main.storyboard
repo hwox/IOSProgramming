@@ -58,6 +58,10 @@
                                     <outlet property="delegate" destination="USB-Lm-tJ1" id="n2L-qu-85w"/>
                                 </connections>
                             </pickerView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="korean" translatesAutoresizingMaskIntoConstraints="NO" id="iuN-Ag-t0S">
+                                <rect key="frame" x="266" y="654" width="148" height="131"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PWo-gt-Sh6"/>
@@ -191,25 +195,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="I1N-4W-TT1">
-                                <rect key="frame" x="20" y="489" width="374" height="303"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I1N-4W-TT1">
+                                <rect key="frame" x="20" y="439" width="374" height="353"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="S-CoreDream-4Regular" family="S-Core Dream" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DVI-FI-kFe">
-                                <rect key="frame" x="20" y="353" width="374" height="92"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="DVI-FI-kFe">
+                                <rect key="frame" x="20" y="303" width="374" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" name="SangSangShinb7" family="SangSangShinb7" pointSize="26"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pagoda" translatesAutoresizingMaskIntoConstraints="NO" id="RrS-40-CeI">
-                                <rect key="frame" x="20" y="151" width="360" height="194"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pagoda" translatesAutoresizingMaskIntoConstraints="NO" id="pWy-Kg-IcQ">
+                                <rect key="frame" x="87" y="129" width="241" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.71540635819999998" green="0.58758693930000006" blue="0.91884368660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -218,7 +223,7 @@
                     <connections>
                         <outlet property="coreText" destination="DVI-FI-kFe" id="viu-yG-rml"/>
                         <outlet property="explainview" destination="7Jk-97-aSY" id="eC2-7t-Hur"/>
-                        <outlet property="imagehouse" destination="RrS-40-CeI" id="6LX-FJ-Ins"/>
+                        <outlet property="imagehouse" destination="pWy-Kg-IcQ" id="IJp-5x-bU3"/>
                         <outlet property="introText" destination="I1N-4W-TT1" id="iid-HI-e74"/>
                     </connections>
                 </viewController>
@@ -313,12 +318,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="hj6-4D-Vl0">
+                                <rect key="frame" x="212" y="44" width="202" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="n9s-3d-vLq">
+                                <rect key="frame" x="0.0" y="44" width="202" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1xI-2S-jk0"/>
                     </view>
                     <connections>
                         <outlet property="MainImage" destination="EB6-rU-qSX" id="DGq-HN-ILm"/>
+                        <outlet property="leftDoor" destination="n9s-3d-vLq" id="CPE-70-Wnf"/>
+                        <outlet property="rightDoor" destination="hj6-4D-Vl0" id="u7I-yU-OLY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkj-pn-Ssl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -469,6 +484,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fzT-eM-vj0">
+                            <rect key="frame" x="0.0" y="72" width="414" height="57"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" name="SangSangShinb7" family="SangSangShinb7" pointSize="26"/>
+                            <state key="normal" title="추천관광지는?">
+                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <segue destination="2pC-Nk-SgH" kind="show" identifier="segueToRecommend" id="m9h-Kg-NSB"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="MQk-d3-qZT" detailTextLabel="YXt-IP-yvK" style="IBUITableViewCellStyleSubtitle" id="LLc-7i-jEI">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -504,7 +530,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="주변관광지리스트" id="BjC-RV-C8o" colorLabel="IBBuiltInLabel-Purple">
-                        <barButtonItem key="leftBarButtonItem" title="처음으로" id="1mz-uC-hMV"/>
+                        <barButtonItem key="leftBarButtonItem" title="처음으로" id="1mz-uC-hMV">
+                            <connections>
+                                <segue destination="AQ0-KF-aIF" kind="show" id="zNH-wM-ZaY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="TbData" destination="FdC-nO-d3J" id="qH2-dx-vjZ"/>
@@ -528,9 +558,6 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="0.9182196856" green="0.88071626420000004" blue="0.9633401036" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <items>
-                                <barButtonItem title="지도보기" id="3vK-yl-nVO">
-                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </barButtonItem>
                                 <barButtonItem title="관광지 상세설명" id="In7-3r-iAR">
                                     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <connections>
@@ -548,14 +575,14 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cg6-h4-1yb">
-                                            <rect key="frame" x="20" y="2" width="34" height="21"/>
+                                            <rect key="frame" x="20" y="1" width="36" height="21"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="S-CoreDream-4Regular" family="S-Core Dream" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aJK-Oe-P5f">
-                                            <rect key="frame" x="20" y="23" width="58" height="20"/>
+                                            <rect key="frame" x="20" y="22" width="57" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" name="SangSangShinb7" family="SangSangShinb7" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -571,11 +598,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="wut-nZ-72C">
-                        <barButtonItem key="rightBarButtonItem" title="즐겨찾기" largeContentSizeImage="drum" id="Klj-Yh-K7f">
-                            <color key="tintColor" red="0.71540635819999998" green="0.58758693930000006" blue="0.91884368660000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Title" id="wut-nZ-72C"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="detailTableView" destination="YQt-Qh-K0E" id="v2s-zb-9ZF"/>
@@ -593,7 +616,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="mge-fT-cgO">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mge-fT-cgO">
                                 <rect key="frame" x="20" y="489" width="374" height="303"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -601,7 +624,7 @@
                                 <fontDescription key="fontDescription" name="S-CoreDream-4Regular" family="S-Core Dream" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ZXP-L1-KRE">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZXP-L1-KRE">
                                 <rect key="frame" x="20" y="353" width="374" height="92"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -610,7 +633,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shoes" translatesAutoresizingMaskIntoConstraints="NO" id="wHk-Hr-SUF">
-                                <rect key="frame" x="20" y="151" width="360" height="194"/>
+                                <rect key="frame" x="77" y="179" width="261" height="135"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -625,17 +648,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Mw-hQ-xbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7043" y="1967"/>
+            <point key="canvasLocation" x="7042.0289855072469" y="1966.7410714285713"/>
+        </scene>
+        <!--추천관광지-->
+        <scene sceneID="oHy-lE-QTV">
+            <objects>
+                <viewController title="추천관광지" id="2pC-Nk-SgH" customClass="RecommendViewController" customModule="TranditionalHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KzD-4M-56V">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="6b5-tq-udK">
+                                <rect key="frame" x="20" y="507" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mOx-a7-jQc">
+                                <rect key="frame" x="20" y="389" width="374" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hOm-Ba-zfj">
+                                <rect key="frame" x="87" y="166" width="240" height="179"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kimono" translatesAutoresizingMaskIntoConstraints="NO" id="gjE-cx-s9D">
+                                <rect key="frame" x="280" y="673" width="114" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Kjv-Ip-SeK"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoText" destination="6b5-tq-udK" id="oOl-rc-FkK"/>
+                        <outlet property="nameText" destination="mOx-a7-jQc" id="i6i-JX-uXp"/>
+                        <outlet property="tourimage" destination="hOm-Ba-zfj" id="mQA-ia-C24"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQe-E7-LBM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3834.7826086956525" y="1980.8035714285713"/>
         </scene>
     </scenes>
     <resources>
         <image name="button" width="300" height="145"/>
+        <image name="door" width="219" height="440"/>
         <image name="drum" width="128" height="128"/>
         <image name="frame" width="2000" height="2000"/>
+        <image name="kimono" width="128" height="128"/>
+        <image name="korean" width="128" height="128"/>
         <image name="pagoda" width="64" height="64"/>
         <image name="shoes" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="zNH-wM-ZaY"/>
         <segue reference="Q16-43-uz4"/>
         <segue reference="TxM-lV-ia6"/>
     </inferredMetricsTieBreakers>
