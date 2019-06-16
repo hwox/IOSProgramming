@@ -28,6 +28,7 @@
 		77AAD55422B63B0D00394C5C /* SCDream4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD55222B63A8600394C5C /* SCDream4.otf */; };
 		77AAD55522B63B0F00394C5C /* SSShinb7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD55322B63AF500394C5C /* SSShinb7.ttf */; };
 		77AAD55722B63FD400394C5C /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD55622B63FD400394C5C /* frame.png */; };
+		77B0F02C22B647F700CB6B4F /* ExplainHouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B0F02B22B647F700CB6B4F /* ExplainHouseViewController.swift */; };
 		77DD7CCB22A4C15F00502398 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7CCA22A4C15F00502398 /* Candy.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		77AAD55222B63A8600394C5C /* SCDream4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream4.otf; sourceTree = "<group>"; };
 		77AAD55322B63AF500394C5C /* SSShinb7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SSShinb7.ttf; sourceTree = "<group>"; };
 		77AAD55622B63FD400394C5C /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame.png; sourceTree = "<group>"; };
+		77B0F02B22B647F700CB6B4F /* ExplainHouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainHouseViewController.swift; sourceTree = "<group>"; };
 		77DD7CCA22A4C15F00502398 /* Candy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +107,7 @@
 				77DD7CCA22A4C15F00502398 /* Candy.swift */,
 				77AAD53E22B3A1D700394C5C /* TourTableViewController.swift */,
 				77AAD54022B6216F00394C5C /* StartTableViewController.swift */,
+				77B0F02B22B647F700CB6B4F /* ExplainHouseViewController.swift */,
 			);
 			path = TranditionalHouse;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77B0F02C22B647F700CB6B4F /* ExplainHouseViewController.swift in Sources */,
 				77AAD54A22B62CDE00394C5C /* ExplodeView.swift in Sources */,
 				7754333D22A47CF600745A56 /* LocationChoiceViewController.swift in Sources */,
 				7754333B22A4665700745A56 /* House.swift in Sources */,

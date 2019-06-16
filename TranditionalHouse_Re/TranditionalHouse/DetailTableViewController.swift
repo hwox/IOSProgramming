@@ -49,6 +49,10 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
     var YPos = NSMutableString()
     
     
+    var housename = ""
+    var housename_utf8 = ""
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         beginParsing()
@@ -308,6 +312,23 @@ class DetailTableViewController: UITableViewController, XMLParserDelegate {
                 mapViewController.posts = location
             }
         }
+ 
+        
+        if segue.identifier == "segueToExplainHouse"{
+
+       
+
+                housename = posts[0] as! NSString as String
+                // url에서 한글을 쓸 수 있도록 코딩
+               housename_utf8 = housename.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
+                if let explainHouseViewController = segue.destination as? ExplainHouseViewController {
+                    
+                    explainHouseViewController.url = "http://api.visitkorea.or.kr/openapi/service/rest/HanokInformationService/hanokInformationList?serviceKey=uCstxgLSF6idf%2BteFc1Sb8ZX03SfFvl8h6aDFb8CqgB5%2FnR%2FehJ2cH9wgg0iGzH28sD8Aj0IYiTDJ7ZZnEJkGw%3D%3D&numOfRows=10&pageNo=1&langType=KOR&MobileOS=ETC&MobileApp=AppTest"  + "&titleKorean=" + housename_utf8
+    
+                }
+
+            }
+        
         
         
     }
