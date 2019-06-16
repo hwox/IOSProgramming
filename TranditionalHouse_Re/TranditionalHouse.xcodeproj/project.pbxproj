@@ -19,6 +19,11 @@
 		7754333D22A47CF600745A56 /* LocationChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333C22A47CF600745A56 /* LocationChoiceViewController.swift */; };
 		7754333F22A4993400745A56 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7754333E22A4993400745A56 /* MapViewController.swift */; };
 		77AAD53F22B3A1D700394C5C /* TourTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD53E22B3A1D700394C5C /* TourTableViewController.swift */; };
+		77AAD54122B6216F00394C5C /* StartTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD54022B6216F00394C5C /* StartTableViewController.swift */; };
+		77AAD54422B621CE00394C5C /* icon in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD54322B621CE00394C5C /* icon */; };
+		77AAD54822B62CCE00394C5C /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD54722B62CCE00394C5C /* Audio */; };
+		77AAD54A22B62CDE00394C5C /* ExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD54922B62CDE00394C5C /* ExplodeView.swift */; };
+		77AAD54C22B62CE800394C5C /* StardustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD54B22B62CE800394C5C /* StardustView.swift */; };
 		77DD7CCB22A4C15F00502398 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7CCA22A4C15F00502398 /* Candy.swift */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +42,11 @@
 		7754333C22A47CF600745A56 /* LocationChoiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationChoiceViewController.swift; sourceTree = "<group>"; };
 		7754333E22A4993400745A56 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		77AAD53E22B3A1D700394C5C /* TourTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TourTableViewController.swift; sourceTree = "<group>"; };
+		77AAD54022B6216F00394C5C /* StartTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTableViewController.swift; sourceTree = "<group>"; };
+		77AAD54322B621CE00394C5C /* icon */ = {isa = PBXFileReference; lastKnownFileType = folder; name = icon; path = ../../icon; sourceTree = "<group>"; };
+		77AAD54722B62CCE00394C5C /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = "../../../../스마트폰게임프로그래밍/Yahtzee/Yahtzee/Assets/Audio"; sourceTree = "<group>"; };
+		77AAD54922B62CDE00394C5C /* ExplodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplodeView.swift; sourceTree = "<group>"; };
+		77AAD54B22B62CE800394C5C /* StardustView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StardustView.swift; sourceTree = "<group>"; };
 		77DD7CCA22A4C15F00502398 /* Candy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -54,6 +64,8 @@
 		7754330C22A3F15B00745A56 = {
 			isa = PBXGroup;
 			children = (
+				77AAD54622B62CC700394C5C /* Assets */,
+				77AAD54222B621B400394C5C /* Resource */,
 				7754331722A3F15B00745A56 /* TranditionalHouse */,
 				7754331622A3F15B00745A56 /* Products */,
 			);
@@ -84,8 +96,27 @@
 				7754333C22A47CF600745A56 /* LocationChoiceViewController.swift */,
 				77DD7CCA22A4C15F00502398 /* Candy.swift */,
 				77AAD53E22B3A1D700394C5C /* TourTableViewController.swift */,
+				77AAD54022B6216F00394C5C /* StartTableViewController.swift */,
 			);
 			path = TranditionalHouse;
+			sourceTree = "<group>";
+		};
+		77AAD54222B621B400394C5C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				77AAD54322B621CE00394C5C /* icon */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		77AAD54622B62CC700394C5C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				77AAD54922B62CDE00394C5C /* ExplodeView.swift */,
+				77AAD54B22B62CE800394C5C /* StardustView.swift */,
+				77AAD54722B62CCE00394C5C /* Audio */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7754332322A3F15C00745A56 /* LaunchScreen.storyboard in Resources */,
+				77AAD54822B62CCE00394C5C /* Audio in Resources */,
+				77AAD54422B621CE00394C5C /* icon in Resources */,
 				7754332022A3F15C00745A56 /* Assets.xcassets in Resources */,
 				7754331E22A3F15B00745A56 /* Main.storyboard in Resources */,
 			);
@@ -159,12 +192,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77AAD54A22B62CDE00394C5C /* ExplodeView.swift in Sources */,
 				7754333D22A47CF600745A56 /* LocationChoiceViewController.swift in Sources */,
 				7754333B22A4665700745A56 /* House.swift in Sources */,
 				7754333322A4043400745A56 /* ViewController.swift in Sources */,
 				7754333F22A4993400745A56 /* MapViewController.swift in Sources */,
 				77DD7CCB22A4C15F00502398 /* Candy.swift in Sources */,
 				77AAD53F22B3A1D700394C5C /* TourTableViewController.swift in Sources */,
+				77AAD54122B6216F00394C5C /* StartTableViewController.swift in Sources */,
+				77AAD54C22B62CE800394C5C /* StardustView.swift in Sources */,
 				7754333522A4050F00745A56 /* DetailTableViewController.swift in Sources */,
 				7754331922A3F15B00745A56 /* AppDelegate.swift in Sources */,
 				7754332D22A3FB2200745A56 /* LikeAddViewController.swift in Sources */,

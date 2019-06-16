@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lU2-AU-f5c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xHp-sM-GsV">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -278,47 +278,38 @@
             </objects>
             <point key="canvasLocation" x="3886.9565217391309" y="709.82142857142856"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="35i-SV-wbw">
+        <!--Start Table View Controller-->
+        <scene sceneID="k8q-mq-5RW">
             <objects>
-                <viewController id="chK-L0-LO0" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="JSU-MV-ZMO">
+                <viewController id="xHp-sM-GsV" customClass="StartTableViewController" customModule="TranditionalHouse" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PSV-4d-ha2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AO2-Ou-t5Y">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="로고" translatesAutoresizingMaskIntoConstraints="NO" id="EB6-rU-qSX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="657" translatesAutoresizingMaskIntoConstraints="NO" id="I0O-eC-adv">
-                                <rect key="frame" x="44" y="117" width="327" height="657"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="I0O-eC-adv" id="tq2-DQ-9Ff">
-                                    <rect key="frame" x="0.0" y="0.0" width="327" height="656.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hi" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMk-4c-KOq">
-                                            <rect key="frame" x="115" y="313" width="97" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <nil key="textColor"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </textField>
-                                    </subviews>
-                                </tableViewCellContentView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n6F-Un-4tL">
+                                <rect key="frame" x="95" y="587" width="224" height="102"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.71540635824203491" green="0.58758693933486938" blue="0.91884368658065796" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button" image="start"/>
                                 <connections>
-                                    <segue destination="lU2-AU-f5c" kind="show" id="fyk-On-yAy"/>
+                                    <segue destination="lU2-AU-f5c" kind="show" identifier="segueToStart" id="1fS-fg-Bvb"/>
                                 </connections>
-                            </tableViewCell>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="jiv-Kd-pXj"/>
+                        <viewLayoutGuide key="safeArea" id="1xI-2S-jk0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="2kd-c0-BU2"/>
+                    <connections>
+                        <outlet property="MainImage" destination="EB6-rU-qSX" id="DGq-HN-ILm"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ig7-v7-pqH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fkj-pn-Ssl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957.9710144927537" y="717.85714285714278"/>
+            <point key="canvasLocation" x="2000.0000000000002" y="709.82142857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wcy-NK-Iav">
@@ -337,24 +328,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yjD-Zu-Nrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2976.811594202899" y="709.82142857142856"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="fdi-nj-sxq">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y9M-Pf-Kss" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="h7H-Q2-Ps7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="chK-L0-LO0" kind="relationship" relationship="rootViewController" id="llE-dv-4K9"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vAS-W8-YPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="717.85714285714278"/>
         </scene>
         <!--관광지상세설명-->
         <scene sceneID="AX4-WO-4gE">
@@ -530,9 +503,12 @@
             <point key="canvasLocation" x="4066.666666666667" y="1887.7232142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="start" width="300" height="145"/>
+        <image name="로고" width="2000" height="2000"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="O5i-bq-VcI"/>
-        <segue reference="ymF-ZW-PBs"/>
+        <segue reference="TcC-tC-E0e"/>
         <segue reference="9kI-9c-Rm2"/>
     </inferredMetricsTieBreakers>
 </document>
