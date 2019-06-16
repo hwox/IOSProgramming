@@ -24,6 +24,10 @@
 		77AAD54822B62CCE00394C5C /* Audio in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD54722B62CCE00394C5C /* Audio */; };
 		77AAD54A22B62CDE00394C5C /* ExplodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD54922B62CDE00394C5C /* ExplodeView.swift */; };
 		77AAD54C22B62CE800394C5C /* StardustView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77AAD54B22B62CE800394C5C /* StardustView.swift */; };
+		77AAD55022B6381400394C5C /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD54F22B6381400394C5C /* button.png */; };
+		77AAD55422B63B0D00394C5C /* SCDream4.otf in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD55222B63A8600394C5C /* SCDream4.otf */; };
+		77AAD55522B63B0F00394C5C /* SSShinb7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD55322B63AF500394C5C /* SSShinb7.ttf */; };
+		77AAD55722B63FD400394C5C /* frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 77AAD55622B63FD400394C5C /* frame.png */; };
 		77DD7CCB22A4C15F00502398 /* Candy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DD7CCA22A4C15F00502398 /* Candy.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +51,10 @@
 		77AAD54722B62CCE00394C5C /* Audio */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Audio; path = "../../../../스마트폰게임프로그래밍/Yahtzee/Yahtzee/Assets/Audio"; sourceTree = "<group>"; };
 		77AAD54922B62CDE00394C5C /* ExplodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExplodeView.swift; sourceTree = "<group>"; };
 		77AAD54B22B62CE800394C5C /* StardustView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StardustView.swift; sourceTree = "<group>"; };
+		77AAD54F22B6381400394C5C /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		77AAD55222B63A8600394C5C /* SCDream4.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDream4.otf; sourceTree = "<group>"; };
+		77AAD55322B63AF500394C5C /* SSShinb7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SSShinb7.ttf; sourceTree = "<group>"; };
+		77AAD55622B63FD400394C5C /* frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame.png; sourceTree = "<group>"; };
 		77DD7CCA22A4C15F00502398 /* Candy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Candy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +72,7 @@
 		7754330C22A3F15B00745A56 = {
 			isa = PBXGroup;
 			children = (
+				7754331C22A3F15B00745A56 /* Main.storyboard */,
 				77AAD54622B62CC700394C5C /* Assets */,
 				77AAD54222B621B400394C5C /* Resource */,
 				7754331722A3F15B00745A56 /* TranditionalHouse */,
@@ -83,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				7754331822A3F15B00745A56 /* AppDelegate.swift */,
-				7754331C22A3F15B00745A56 /* Main.storyboard */,
 				7754331F22A3F15C00745A56 /* Assets.xcassets */,
 				7754332122A3F15C00745A56 /* LaunchScreen.storyboard */,
 				7754333222A4043300745A56 /* ViewController.swift */,
@@ -104,6 +112,9 @@
 		77AAD54222B621B400394C5C /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				77AAD55622B63FD400394C5C /* frame.png */,
+				77AAD55122B63A8200394C5C /* Font */,
+				77AAD54F22B6381400394C5C /* button.png */,
 				77AAD54322B621CE00394C5C /* icon */,
 			);
 			path = Resource;
@@ -117,6 +128,15 @@
 				77AAD54722B62CCE00394C5C /* Audio */,
 			);
 			path = Assets;
+			sourceTree = "<group>";
+		};
+		77AAD55122B63A8200394C5C /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				77AAD55222B63A8600394C5C /* SCDream4.otf */,
+				77AAD55322B63AF500394C5C /* SSShinb7.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7754332322A3F15C00745A56 /* LaunchScreen.storyboard in Resources */,
+				77AAD55522B63B0F00394C5C /* SSShinb7.ttf in Resources */,
+				77AAD55022B6381400394C5C /* button.png in Resources */,
 				77AAD54822B62CCE00394C5C /* Audio in Resources */,
+				77AAD55422B63B0D00394C5C /* SCDream4.otf in Resources */,
+				77AAD55722B63FD400394C5C /* frame.png in Resources */,
 				77AAD54422B621CE00394C5C /* icon in Resources */,
 				7754332022A3F15C00745A56 /* Assets.xcassets in Resources */,
 				7754331E22A3F15B00745A56 /* Main.storyboard in Resources */,
